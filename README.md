@@ -37,3 +37,7 @@ python
 >>> reverse.delay('iuri')
 <AsyncResult: bb4015f7-a1c6-45b6-9788-36a97ad7e681>
 ```
+
+5. Acknowledgements
+
+Thanks to "Pretty Printed" at [https://www.youtube.com/watch?v=THxCy-6EnQM ]( https://www.youtube.com/watch?v=THxCy-6EnQM )
