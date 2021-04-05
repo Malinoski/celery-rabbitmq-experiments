@@ -1,8 +1,8 @@
-# celery-rabbitmq-experiments
+# Celery Rabbitmq Experiments
 
 Local tests for Python, Celery and RabbitMQ
 
-###
+#### How to use
 
 1. Install Celery 
 
@@ -34,11 +34,10 @@ celery -A tasks worker --loglevel=info
 cd [root project]
 source venv/bin/activate
 python
->>> from tasks import reverse
->>> reverse.delay('iuri')
-<AsyncResult: bb4015f7-a1c6-45b6-9788-36a97ad7e681>
+from tasks import reverse
+from time import sleep
+result = reverse.delay('iuri'); result.status; sleep(6); result.status
 ```
 
-5. Acknowledgements
-
-Thanks to "Pretty Printed" at [https://www.youtube.com/watch?v=THxCy-6EnQM ]( https://www.youtube.com/watch?v=THxCy-6EnQM )
+#### Acknowledgements
+Thanks to Pretty Printed at [https://www.youtube.com/watch?v=THxCy-6EnQM](https://www.youtube.com/watch?v=THxCy-6EnQM)
