@@ -24,6 +24,7 @@ Check web interface at: http://localhost:15672/ (guest:guest)
 3. Run celery for the tasks 
 
 ```
+cd [root project]
 celery -A tasks worker --loglevel=info
 ```
 
