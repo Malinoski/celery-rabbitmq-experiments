@@ -1,7 +1,10 @@
 from tasks import reverse
 from time import sleep
 
-print("# Test 1 - status")
+print("# Test 0 - task name")
+print(reverse.name)
+
+print("\n# Test 1 - status")
 result = reverse.delay('iuri')  # or reverse.apply_async(args=['iuri'])
 print("Get the id: ", result.id)
 print("Get the status: ", result.status)
