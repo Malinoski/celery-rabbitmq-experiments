@@ -13,18 +13,19 @@ source venv/bin/activate
 pip install celery
 ```
 
-2. Deploy and start local RabbitMQ
+2. Run local RabbitMQ container
 
 ```
 docker run -d --hostname localhost --name local-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 ```
 
-Check web interface at: http://localhost:15672/ (guest:guest)
+Check web interface at: [http://localhost:15672](http://localhost:15672) (User:guest; password:guest)
 
 3. Run celery for the tasks 
 
 ```
 cd [root project]
+source venv/bin/activate
 celery -A tasks worker --loglevel=info
 ```
 
@@ -33,10 +34,7 @@ celery -A tasks worker --loglevel=info
 ```
 cd [root project]
 source venv/bin/activate
-python
-from tasks import reverse
-from time import sleep
-result = reverse.delay('iuri'); result.status; sleep(6); result.status
+python tests.py
 ```
 
 #### Acknowledgements
